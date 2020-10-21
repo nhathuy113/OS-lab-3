@@ -3,17 +3,18 @@
 #include <unistd.h>
 int  value = 5;
 int  main () {
+	printf("\n");
 	pid_t  pid ;
 	pid = fork ();
 	if (pid == 0) {
 		//child  process
 		value += 15;
-		printf(" => THIS IS CHILD PROCESS, MOTHERFUCKER!!!");
+		printf(" => THIS IS CHILD PROCESS, MOTHERFUCKER!!!\n");
 	}
 	else if (pid > 0)  { 
 		//parent  process
 		wait(NULL);
-		printf(" => PARENT: value = %d" , value );
+		printf(" => PARENT: value = %d\n" , value );
 	}
 
 	// make console wait for any key pressed before exit
@@ -22,8 +23,8 @@ int  main () {
 	// 	inputstream = getchar();
 	// }
 	// while(inputstream != '\n' && inputstream != EOF);
-    printf("\n.\n.\n.Press ENTER key to Continue ...");
-    getchar();
+    // printf("\n.\n.\n.Press ENTER key to Continue ...");
+    // getchar();
 	
 	return 0;
 }

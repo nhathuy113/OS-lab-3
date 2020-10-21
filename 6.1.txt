@@ -1,0 +1,4 @@
+6.1
+1. parent always print value = 5, since variable is not shared between the two.
+2. C - shared memory segment
+
